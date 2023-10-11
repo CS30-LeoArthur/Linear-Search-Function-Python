@@ -14,20 +14,17 @@ def linearSearch(a_list, item):
 def binarySearch(a_list, item):
     lower_index = 0
     higher_index = len(a_list) - 1
-    middle_index = math.floor(lower_index + higher_index / 2)
-    done = False
 
-    while done == False:
+    while True:
+        middle_index = math.floor((lower_index + higher_index) / 2)
         if item == a_list[middle_index]:
             return middle_index
-            done = True
         elif item < a_list[middle_index]:
             higher_index = middle_index - 1
         elif item > a_list[middle_index]:
             lower_index = middle_index + 1
-    
-    return -1
-
+        else:
+            return -1
     
 
 def main():
