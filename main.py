@@ -34,5 +34,5 @@ def main():
     print(binarySearch(words, "fish"))
     print(binarySearch(words, "at"))
     print(binarySearch(unsorted, 70))
-
+    
 main()
